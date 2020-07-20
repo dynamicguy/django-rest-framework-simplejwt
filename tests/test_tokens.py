@@ -1,18 +1,16 @@
 from datetime import datetime, timedelta
-from unittest.mock import patch
-
 from django.test import TestCase
 from jose import jwt
-
 from rest_framework_simplejwt.exceptions import TokenError
 from rest_framework_simplejwt.settings import api_settings
 from rest_framework_simplejwt.state import User
 from rest_framework_simplejwt.tokens import (
-    AccessToken, RefreshToken, SlidingToken, Token, UntypedToken,
+    AccessToken, RefreshToken, SlidingToken, Token, UntypedToken
 )
 from rest_framework_simplejwt.utils import (
-    aware_utcnow, datetime_to_epoch, make_utc,
+    aware_utcnow, datetime_to_epoch, make_utc
 )
+from unittest.mock import patch
 
 from .utils import override_api_settings
 

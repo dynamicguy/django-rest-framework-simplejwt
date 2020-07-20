@@ -1,6 +1,5 @@
-from uuid import UUID
-
 from django.db import migrations
+from uuid import UUID
 
 
 def populate_jti_hex(apps, schema_editor):

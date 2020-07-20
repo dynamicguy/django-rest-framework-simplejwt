@@ -1,13 +1,11 @@
 from datetime import datetime, timedelta
-from unittest.mock import patch
-
 from django.test import TestCase
 from django.utils import timezone
-
 from rest_framework_simplejwt.utils import (
     aware_utcnow, datetime_from_epoch, datetime_to_epoch, format_lazy,
-    make_utc,
+    make_utc
 )
+from unittest.mock import patch
 
 
 class TestMakeUtc(TestCase):

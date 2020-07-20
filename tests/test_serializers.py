@@ -1,26 +1,24 @@
 from datetime import timedelta
-from unittest.mock import MagicMock, patch
-
 from django.test import TestCase
 from rest_framework import exceptions as drf_exceptions
-
 from rest_framework_simplejwt.exceptions import TokenError
 from rest_framework_simplejwt.serializers import (
     TokenObtainPairSerializer, TokenObtainSerializer,
     TokenObtainSlidingSerializer, TokenRefreshSerializer,
-    TokenRefreshSlidingSerializer, TokenVerifySerializer,
+    TokenRefreshSlidingSerializer, TokenVerifySerializer
 )
 from rest_framework_simplejwt.settings import api_settings
 from rest_framework_simplejwt.state import User
 from rest_framework_simplejwt.token_blacklist.models import (
-    BlacklistedToken, OutstandingToken,
+    BlacklistedToken, OutstandingToken
 )
 from rest_framework_simplejwt.tokens import (
-    AccessToken, RefreshToken, SlidingToken,
+    AccessToken, RefreshToken, SlidingToken
 )
 from rest_framework_simplejwt.utils import (
-    aware_utcnow, datetime_from_epoch, datetime_to_epoch,
+    aware_utcnow, datetime_from_epoch, datetime_to_epoch
 )
+from unittest.mock import MagicMock, patch
 
 from .utils import override_api_settings
 

@@ -1,10 +1,8 @@
 import contextlib
-
 from django.db import connection
 from django.db.migrations.executor import MigrationExecutor
 from django.test import TestCase, TransactionTestCase
 from rest_framework.test import APIClient
-
 from rest_framework_simplejwt.compat import reverse
 from rest_framework_simplejwt.settings import api_settings
 
